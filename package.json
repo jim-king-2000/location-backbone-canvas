@@ -1,0 +1,23 @@
+{
+  "name": "location-backbone-canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jim-king-2000/location-backbone-canvas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jim-king-2000/location-backbone-canvas/issues"
+  },
+  "homepage": "https://github.com/jim-king-2000/location-backbone-canvas#readme",
+  "dependencies": {
+    "react-amap": "^1.2.8"
+  }
+}
