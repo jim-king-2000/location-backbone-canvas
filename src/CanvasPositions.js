@@ -1,9 +1,10 @@
 import React from 'react';
 import { Marker } from 'react-amap';
+import { observer } from 'mobx-react';
 import { colorPool } from './common/PolylineStyle';
 import CarTopView from '../icon/CarTopView';
 
-export const CanvasPositions = ({ __map__, things, ...props }) => (
+export const CanvasPositions = observer(({ __map__, things, ...props }) => (
   <>
     {things && things.filter(p => p && p.latitude && p.longitude).map(p => (
       <Marker
@@ -23,4 +24,4 @@ export const CanvasPositions = ({ __map__, things, ...props }) => (
       />
     ))}
   </>
-);
+));
