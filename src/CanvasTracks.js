@@ -19,7 +19,8 @@ export class CanvasTracks extends Component {
             path={pathItem}
             events={{ created: () => __map__.setFitView() }}
             style={{
-              strokeColor: colorPool[track.colorIndex % colorPool.length],
+              strokeColor: colorPool[track.colorIndex % colorPool.length] ||
+                '#006600',
               ...lineStyle
             }} />);
         })}
