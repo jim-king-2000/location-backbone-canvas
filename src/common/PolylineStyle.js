@@ -1,6 +1,7 @@
 export const lineStyle = {
-  strokeWeight: 1,
-  lineJoin: 'round'
+  strokeWeight: 2,
+  lineJoin: 'round',
+  lineCap: 'round'
 };
 
 export const colorPool = [
