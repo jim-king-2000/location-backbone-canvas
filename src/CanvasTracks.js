@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Polyline } from 'react-amap';
+import { lineStyle, colorPool } from './common/PolylineStyle';
 
 export class CanvasTracks extends Component {
   render() {
@@ -16,7 +17,11 @@ export class CanvasTracks extends Component {
             __map__={__map__}
             key={`${track.thingId}-${i}`}
             path={pathItem}
-            events={{ created: () => __map__.setFitView() }} />);
+            events={{ created: () => __map__.setFitView() }}
+            style={{
+              strokeColor: colorPool[track.colorIndex % colorPool.length],
+              ...lineStyle
+            }} />);
         })}
       </>
     );
