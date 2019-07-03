@@ -14,6 +14,7 @@ export const CanvasPositions = observer(({ __map__, things, ...props }) => (
           fontSize={30}
           fill={colorPool[p.colorIndex % colorPool.length]}
         />)}
+        label={p.isOnline ? '在线' : '离线'}
         offset={[-15, -15]}
         zIndex={150}
         position={p}
