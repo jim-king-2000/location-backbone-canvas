@@ -16,7 +16,7 @@ export const CanvasInformation = observer(({
     {data && <Table>
       <TableBody>
         {template && template.map(t => (
-          <TableRow>
+          <TableRow key={t.property}>
             <TableCell>{t.label}</TableCell>
             <TableCell>
               {t.transform ?
