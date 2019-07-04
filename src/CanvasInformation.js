@@ -9,7 +9,7 @@ export const CanvasInformation = observer(({
   <InfoWindow
     __map__={__map__}
     position={data}
-    visible={!!data}
+    visible={data && data.enabled}
     events={{ close: onClose }}
     {...props}
   >
