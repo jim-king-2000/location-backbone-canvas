@@ -18,7 +18,10 @@ export const CanvasPositions = observer(
           title={p.isOnline ? '在线' : '离线'}
           offset={[-15, -15]}
           zIndex={150}
-          position={p}
+          position={{
+            latitude: p.latitude,
+            longitude: p.longitude
+          }}
           angle={p.heading}
           extData={p}
           events={{
