@@ -8,6 +8,6 @@ export const CanvasInformation = observer(({
   <InfoWindow
     events={{ close: onClose }}
   >
-    abc
+    <div>abc</div>
   </InfoWindow>
 ));
