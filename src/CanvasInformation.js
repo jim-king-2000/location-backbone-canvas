@@ -17,7 +17,7 @@ export const CanvasInformation = observer(({
       events={{ close: onClose }}
       {...props}
     >
-      <Box background={{ opacity: 'strong' }}>
+      <Box background={{ opacity: 'medium' }}>
         <Table>
           <TableBody>
             {template && template.map(t => (
