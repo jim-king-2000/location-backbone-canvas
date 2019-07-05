@@ -20,6 +20,7 @@ export const CanvasInformation = observer(({
       <Table>
         <TableBody>
           {template && template.map(t => (
+            data[t.property] &&
             <TableRow key={t.property}>
               <TableCell>{t.label}</TableCell>
               <TableCell>
