@@ -6,15 +6,17 @@ function transformPoint(p, sourceCoordinateType) {
     sourceCoordinateType,
     GCJ02
   );
-  p.longitude = longitude;
-  p.latitude = latitude;
+  const newPoint = { ...p };
+  newPoint.longitude = longitude;
+  newPoint.latitude = latitude;
+  return newPoint;
 }
 
 export function coordinateTransform(p) {
   if (p.coordinateType === 'wgs-84') {
-    transformPoint(p, WGS84);
+    return transformPoint(p, WGS84);
   } else if (p.coordinateType === 'bd-09') {
-    transformPoint(p, BD09)
+    return transformPoint(p, BD09)
   }
 
   return p;
