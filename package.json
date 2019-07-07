@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jim-king-2000/location-backbone-canvas#readme",
   "dependencies": {
-    "react-amap": "^1.2.8",
-    "mobx-react": "^6.1.1"
+    "gcoord": "^0.2.3",
+    "mobx-react": "^6.1.1",
+    "react-amap": "^1.2.8"
   }
 }
