@@ -7,7 +7,8 @@ export const CanvasContainer = ({ children, ...props }) => (
     {children}
     <Box style={{
       position: 'absolute',
-      right: 0
+      right: 0,
+      bottom: 0
     }}>
       <Text>版权所有&#169; 北京百特比邻信息科技有限公司</Text>
     </Box>
