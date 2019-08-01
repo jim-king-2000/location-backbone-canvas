@@ -8,6 +8,7 @@ export class CanvasReactor extends Component {
     const isMarkersOutOfViewport = markers.filter(p => p.latitude && p.longitude).every(
       p => bounds.contains(new AMap.LngLat(p.longitude, p.latitude))
     );
+    console.log(isMarkersOutOfViewport);
     if (isMarkersOutOfViewport) __map__.setFitView();
     return null;
   }
