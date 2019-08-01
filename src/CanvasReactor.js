@@ -5,9 +5,10 @@ export class CanvasReactor extends Component {
     const markers = this.props.markers;
     const __map__ = this.props.__map__;
     const bounds = __map__.getBounds();
-    console.log(markers.filter(p => p.latitude && p.longitude).every(
+    const isMarkersOutOfViewport = markers.filter(p => p.latitude && p.longitude).every(
       p => bounds.contains(new AMap.LngLat(p.longitude, p.latitude))
-    ));
+    );
+    if (isMarkersOutOfViewport) __map__.setFitView();
     return null;
   }
 }
