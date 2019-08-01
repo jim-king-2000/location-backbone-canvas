@@ -9,7 +9,7 @@ export class CanvasReactor extends Component {
       p => bounds.contains(new AMap.LngLat(p.longitude, p.latitude))
     );
     if (!isMarkersInViewport) {
-      __map__.setFitView(AMap.getAllOverlays('marker'));
+      __map__.setFitView(__map__.getAllOverlays('marker'));
     }
     return null;
   }
