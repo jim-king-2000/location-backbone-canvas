@@ -8,7 +8,7 @@ export class CanvasReactor extends Component {
     console.log('Render CanvasReactor.');
     console.log(bounds);
     console.log(markers.filter(p => p.latitude && p.longitude).map(
-      p => bounds.contains(__map__.LngLat(p.longitude, p.latitude))
+      p => bounds.contains(new __map__.LngLat(p.longitude, p.latitude))
     ));
     return null;
   }
