@@ -8,8 +8,9 @@ export class CanvasReactor extends Component {
     const isMarkersInViewport = markers.filter(p => p.latitude && p.longitude).every(
       p => bounds.contains(new AMap.LngLat(p.longitude, p.latitude))
     );
-    console.log(isMarkersInViewport);
-    if (!isMarkersInViewport) __map__.setFitView();
+    if (!isMarkersInViewport) {
+      __map__.setFitView(AMap.getAllOverlays('marker'));
+    }
     return null;
   }
 }
