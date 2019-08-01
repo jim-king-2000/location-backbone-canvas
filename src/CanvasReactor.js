@@ -6,7 +6,9 @@ export class CanvasReactor extends Component {
     const __map__ = this.props.__map__;
     const bounds = __map__.getBounds();
     console.log('Render CanvasReactor.');
-    console.log(bounds);
+    console.log(markers.filter(p => p.latitude && p.longitude).map(
+      p => bounds.contains(p)
+    ));
     return null;
   }
 }
