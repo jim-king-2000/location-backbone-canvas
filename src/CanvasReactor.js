@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 
+@observer
 export class CanvasReactor extends Component {
   render() {
     console.log('tracingMode', this.props.tracingMode)
