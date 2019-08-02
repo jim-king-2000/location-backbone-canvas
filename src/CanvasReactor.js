@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export class CanvasReactor extends Component {
   render() {
-    console.log(this.props.tracingMode)
     if (!this.props.tracingMode) return null;
 
     const __map__ = this.props.__map__;
