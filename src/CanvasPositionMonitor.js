@@ -22,6 +22,7 @@ export class CanvasPositionMonitor extends Component {
 
   render() {
     const positions = this.props.positions;
+    const selectThingId = this.props.selectThingId;
     return (
       <Box flex={{ grow: 1, shrink: 1 }}>
         <CanvasContainer mapkey={this.props.mapKey}>
