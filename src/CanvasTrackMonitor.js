@@ -5,6 +5,7 @@ import { CanvasPositions } from './CanvasPositions';
 import { CanvasReactor } from './CanvasReactor';
 import { CanvasInformation } from './CanvasInformation';
 import { CanvasPluginZoom } from './CanvasPluginZoom';
+import { CanvasTracks } from './CanvasTracks';
 
 // properties
 // mapKey
