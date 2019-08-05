@@ -10,10 +10,10 @@ import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 // properties
 // mapKey
 // positions
-// tracks
 // selectedThing
 // selectThingId = thingId => {}
 // propertyTemplate
+// tracks
 
 export const CanvasTrackMonitor = ({
   mapKey,
