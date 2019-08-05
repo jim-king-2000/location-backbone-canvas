@@ -5,6 +5,7 @@ import { CanvasReactor } from './CanvasReactor';
 import { CanvasInformation } from './CanvasInformation';
 import { CanvasPluginZoom } from './CanvasPluginZoom';
 import { CanvasTracks } from './CanvasTracks';
+import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 
 // properties
 // mapKey
@@ -14,39 +15,20 @@ import { CanvasTracks } from './CanvasTracks';
 // selectThingId = thingId => {}
 // propertyTemplate
 
-export class CanvasTrackMonitor extends Component {
-  state = {
-    tracingMode: false
-  }
-
-  render() {
-    const positions = this.props.positions;
-    const selectThingId = this.props.selectThingId;
-    return (
-      <CanvasContainer mapkey={this.props.mapKey}>
-        <CanvasTracks tracks={this.props.tracks} />
-        <CanvasPositions
-          things={positions}
-          events={{
-            click: e => selectThingId(e.target.getExtData().thingId)
-          }} />
-        <CanvasInformation
-          onClose={() => selectThingId(undefined)}
-          data={this.props.selectedThing}
-          template={this.props.propertyTemplate}
-        />
-        <CanvasPluginZoom
-          direction='row'
-          style={{
-            position: 'absolute',
-            top: 0
-          }}
-          tracingMode={this.state.tracingMode}
-          onChange={e => this.setState({ tracingMode: e.target.checked })} />
-        <CanvasReactor
-          markers={positions}
-          tracingMode={this.state.tracingMode} />
-      </CanvasContainer>
-    );
-  }
-}
+export const CanvasTrackMonitor = ({
+  mapKey,
+  positions,
+  tracks,
+  selectedThing,
+  selectThingId,
+  propertyTemplate
+}) => (
+  <CanvasPositionMonitor
+    mapKey={mapKey}
+    positions={positions}
+    selectedThing={selectedThing}
+    selectThingId={selectThingId}
+    propertyTemplate={propertyTemplate}
+    canvasExtra={<CanvasTracks tracks={tracks} />}
+  />
+);

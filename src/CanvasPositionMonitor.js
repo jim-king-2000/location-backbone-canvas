@@ -11,6 +11,7 @@ import { CanvasPluginZoom } from './CanvasPluginZoom';
 // selectedThing
 // selectThingId = thingId => {}
 // propertyTemplate
+// canvasExtra
 
 export class CanvasPositionMonitor extends Component {
   state = {
@@ -22,6 +23,7 @@ export class CanvasPositionMonitor extends Component {
     const selectThingId = this.props.selectThingId;
     return (
       <CanvasContainer mapkey={this.props.mapKey}>
+        {this.props.canvasExtra}
         <CanvasPositions
           things={positions}
           events={{
