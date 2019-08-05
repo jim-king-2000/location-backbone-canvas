@@ -10,6 +10,7 @@ import { CanvasTracks } from './CanvasTracks';
 // properties
 // mapKey
 // positions
+// tracks
 // selectedThing
 // selectThingId = thingId => {}
 // propertyTemplate
@@ -25,7 +26,7 @@ export class CanvasTrackMonitor extends Component {
     return (
       <Box flex={{ grow: 1, shrink: 1 }}>
         <CanvasContainer mapkey={this.props.mapKey}>
-          <CanvasTracks tracks={store.tracks.get()} />
+          <CanvasTracks tracks={this.props.tracks} />
           <CanvasPositions
             things={positions}
             events={{
