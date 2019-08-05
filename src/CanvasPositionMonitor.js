@@ -16,7 +16,7 @@ import { CanvasPluginZoom } from './CanvasPluginZoom';
 export class CanvasPositionMonitor extends Component {
   state = {
     tracingMode: false
-   }
+  }
 
   render() {
     const positions = this.props.positions;
