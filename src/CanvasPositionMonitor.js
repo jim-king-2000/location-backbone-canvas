@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
 import { Box } from 'grommet';
 import { CanvasContainer } from './CanvasContainer';
 import { CanvasPositions } from './CanvasPositions';
@@ -14,7 +13,6 @@ import { CanvasPluginZoom } from './CanvasPluginZoom';
 // selectThingId = thingId => {}
 // propertyTemplate
 
-@observer
 export class CanvasPositionMonitor extends Component {
   state = {
     tracingMode: false
