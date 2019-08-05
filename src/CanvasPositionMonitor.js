@@ -12,6 +12,7 @@ import { CanvasPluginZoom } from './CanvasPluginZoom';
 // positions
 // selectedThing
 // selectThingId = thingId => {}
+// propertyTemplate
 
 @observer
 export class CanvasPositionMonitor extends Component {
@@ -33,7 +34,7 @@ export class CanvasPositionMonitor extends Component {
           <CanvasInformation
             onClose={() => selectThingId(undefined) }
             data={this.props.selectedThing}
-            template={template}
+            template={this.props.propertyTemplate}
           />
           <CanvasPluginZoom
             direction='row'
