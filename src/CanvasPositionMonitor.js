@@ -24,7 +24,7 @@ export class CanvasPositionMonitor extends Component {
     const positions = this.props.positions;
     return (
       <Box flex={{ grow: 1, shrink: 1 }}>
-        <CanvasContainer mapkey={mapKey}>
+        <CanvasContainer mapkey={this.props.mapKey}>
           <CanvasPositions
             things={positions}
             events={{
