@@ -1,9 +1,3 @@
-import React, { Component } from 'react';
-import { CanvasContainer } from './CanvasContainer';
-import { CanvasPositions } from './CanvasPositions';
-import { CanvasReactor } from './CanvasReactor';
-import { CanvasInformation } from './CanvasInformation';
-import { CanvasPluginZoom } from './CanvasPluginZoom';
 import { CanvasTracks } from './CanvasTracks';
 import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 
