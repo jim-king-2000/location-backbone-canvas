@@ -5,9 +5,11 @@ import { colorPool } from './common/PolylineStyle';
 import CarTopView from '../icon/CarTopView';
 
 export const CanvasPositions = observer(
-  ({ __map__, things, events, ...props }) => (
+  ({ __map__, positions, events, ...props }) => (
     <>
-      {things && things.filter(p => p && p.latitude && p.longitude).map(p => (
+      {Array.isArray(positions) && positions
+      .filter(p => p && p.latitude && p.longitude)
+      .map(p => (
         <Marker
           __map__={__map__}
           key={p.thingId}

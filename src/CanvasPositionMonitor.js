@@ -25,7 +25,7 @@ export class CanvasPositionMonitor extends Component {
       <CanvasContainer mapkey={this.props.mapKey}>
         {this.props.canvasExtra}
         <CanvasPositions
-          things={positions}
+          positions={positions}
           events={{
             click: e => selectThingId(e.target.getExtData().thingId)
           }}
@@ -33,6 +33,10 @@ export class CanvasPositionMonitor extends Component {
         <CanvasInformation
           onClose={() => selectThingId(undefined) }
           data={this.props.selectedThing}
+          template={this.props.propertyTemplate}
+        />
+        <CanvasInformationTable
+          positions={positions}
           template={this.props.propertyTemplate}
         />
         <CanvasPluginZoom
