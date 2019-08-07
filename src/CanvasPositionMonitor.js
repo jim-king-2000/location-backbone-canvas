@@ -41,14 +41,14 @@ export class CanvasPositionMonitor extends Component {
           template={this.props.propertyTemplate}
           style={{
             position: 'absolute',
-            bottom: 0
+            top: 0
           }}
         />
         <CanvasPluginZoom
           direction='row'
           style={{
             position: 'absolute',
-            top: 0
+            bottom: 0
           }}
           tracingMode={this.state.tracingMode}
           onChange={e => this.setState({ tracingMode: e.target.checked })} />
