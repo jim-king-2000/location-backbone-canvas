@@ -39,6 +39,10 @@ export class CanvasPositionMonitor extends Component {
         <CanvasInformationTable
           positions={positions}
           template={this.props.propertyTemplate}
+          style={{
+            position: 'absolute',
+            bottom: 0
+          }}
         />
         <CanvasPluginZoom
           direction='row'
