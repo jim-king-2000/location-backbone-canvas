@@ -3,7 +3,7 @@ import { Map } from 'react-amap';
 import { Box, Text } from 'grommet';
 
 export const CanvasContainer = ({ children, ...props }) => (
-  <Map plugins={['Scale']} version='1.4.14' {...props}>
+  <Map plugins={['Scale']} version='1.4.15' {...props}>
     {children}
     <Box style={{
       position: 'absolute',
