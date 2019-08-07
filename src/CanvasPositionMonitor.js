@@ -36,22 +36,21 @@ export class CanvasPositionMonitor extends Component {
           data={this.props.selectedThing}
           template={this.props.propertyTemplate}
         />
-        <CanvasInformationTable
-          positions={positions}
-          template={this.props.propertyTemplate}
-          style={{
-            position: 'absolute',
-            top: 0
-          }}
-        />
-        <CanvasPluginZoom
+        <Box
           direction='row'
           style={{
             position: 'absolute',
-            bottom: 0
-          }}
+            top: 0
+          }}>
+        <CanvasInformationTable
+          positions={positions}
+          template={this.props.propertyTemplate}
+        />
+        <CanvasPluginZoom
+          direction='row'
           tracingMode={this.state.tracingMode}
           onChange={e => this.setState({ tracingMode: e.target.checked })} />
+        </Box>
         <CanvasReactor
           markers={positions}
           tracingMode={this.state.tracingMode} />
