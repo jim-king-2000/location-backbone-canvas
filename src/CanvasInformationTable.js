@@ -15,11 +15,11 @@ export const CanvasInformationTable = observer(
       <TableBody>
         {Array.isArray(positions) && positions.map(p => (
           <TableRow key={p.thingId}>
-            {Array.isArray(template) && template.map(
+            {Array.isArray(template) && template.map(e => (
               <TableCell key={e.property}>
                 {e.transform ? e.transform(p[e.property]) : p[e.property]}
               </TableCell>
-            )}
+            ))}
           </TableRow>
         ))}
       </TableBody>
