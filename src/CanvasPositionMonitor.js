@@ -39,6 +39,7 @@ export class CanvasPositionMonitor extends Component {
         />
         <Box
           direction='row'
+          align='start'
           style={{
             position: 'absolute',
             top: 0

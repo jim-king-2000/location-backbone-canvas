@@ -3,7 +3,7 @@ import { Home, Add, Subtract } from 'grommet-icons';
 import { observer } from 'mobx-react';
 
 export const CanvasPluginZoom = observer(({ __map__, tracingMode, onChange, ...props }) => (
-  <Box margin='xsmall' gap='xsmall' align='start' {...props}>
+  <Box margin='xsmall' gap='xsmall' align='center' {...props}>
     <Button plain={false} icon={<Home />}
       onClick={() => __map__.setFitView()} />
     <Button plain={false} icon={<Add />}
