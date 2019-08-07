@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import { Box, Table, TableHeader, TableBody, TableRow, TableCell } from 'grommet';
+import { Box, Table, TableHeader, TableBody, TableRow,
+  TableCell } from 'grommet';
 
 export const CanvasInformationTable = observer(
   ({ positions, template, ...props }) => (
@@ -15,9 +16,9 @@ export const CanvasInformationTable = observer(
         {Array.isArray(positions) && positions.map(p => (
           <TableRow key={p.thingId}>
             {Array.isArray(template) && template.map(
-              <TabelCell key={e.property}>
+              <TableCell key={e.property}>
                 {e.transform ? e.transform(p[e.property]) : p[e.property]}
-              </TabelCell>
+              </TableCell>
             )}
           </TableRow>
         ))}
