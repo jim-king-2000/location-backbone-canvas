@@ -45,6 +45,8 @@ export class CanvasPositionMonitor extends Component {
             top: 0
           }}>
         <CanvasInformationTable
+          height='meduim'
+          overflow='auto'
           positions={positions}
           template={this.props.propertyTemplate}
         />
