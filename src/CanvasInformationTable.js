@@ -6,7 +6,7 @@ export const CanvasInformationTable = observer(({ positions, template }) => (
   <Table>
     <TableHeader>
       {Array.isArray(template) && template.map(e => (
-        <TabelCell>{e.label}</TabelCell>
+        <TableCell>{e.label}</TableCell>
       ))}
     </TableHeader>
   </Table>
