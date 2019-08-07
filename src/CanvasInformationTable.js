@@ -8,9 +8,11 @@ export const CanvasInformationTable = observer(
   <Box {...props}>
     <Table>
       <TableHeader>
-        {Array.isArray(template) && template.map(e => (
-          <TableCell key={e.property}>{e.label}</TableCell>
-        ))}
+        <TableRow>
+          {Array.isArray(template) && template.map(e => (
+            <TableCell key={e.property}>{e.label}</TableCell>
+          ))}
+        </TableRow>
       </TableHeader>
       <TableBody>
         {Array.isArray(positions) && positions.map(p => (
