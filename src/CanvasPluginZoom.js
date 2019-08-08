@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Button, CheckBox } from 'grommet';
 import { Home, Add, Subtract } from 'grommet-icons';
 import { observer } from 'mobx-react';

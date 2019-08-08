@@ -1,3 +1,4 @@
+import React from 'react';
 import { CanvasTracks } from './CanvasTracks';
 import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 
