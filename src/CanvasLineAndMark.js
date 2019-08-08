@@ -25,7 +25,7 @@ export const CanvasLineAndMark = ({ lines, __map__ }) => (
             render={<Radial
               style={{
                 size: 'xsmall',
-                color: colorPool[line.colorIndex % colorPool.length]
+                fill: colorPool[line.colorIndex % colorPool.length]
               }}
             />}
           />
