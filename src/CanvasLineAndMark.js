@@ -22,10 +22,13 @@ export const CanvasLineAndMark = ({ lines, __map__ }) => (
             position={stop.location}
             extData={stop}
             offset={[-4, -4]}
-            render={<Radial
-              size='8px'
-              color={colorPool[line.colorIndex % colorPool.length]}
-            />}
+            render={
+              <Radial
+                size='8px'
+                color={colorPool[line.colorIndex % colorPool.length]}
+                style={{ lineHeight: '8px' }}
+              />
+            }
           />
         ))}
       </React.Fragment>
