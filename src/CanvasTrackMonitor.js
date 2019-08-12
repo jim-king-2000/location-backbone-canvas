@@ -1,6 +1,7 @@
 import React from 'react';
 import { CanvasTracks } from './CanvasTracks';
 import { CanvasPositionMonitor } from './CanvasPositionMonitor';
+import { defaultPropertyTemplate } from './common/propertyTemplate';
 
 // properties
 // mapKey
@@ -23,7 +24,7 @@ export const CanvasTrackMonitor = ({
     positions={positions}
     selectedThing={selectedThing}
     selectThingId={selectThingId}
-    propertyTemplate={propertyTemplate}
+    propertyTemplate={propertyTemplate || defaultPropertyTemplate}
     canvasExtra={<CanvasTracks tracks={tracks} />}
   />
 );

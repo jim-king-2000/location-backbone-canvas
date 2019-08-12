@@ -6,6 +6,7 @@ import { CanvasReactor } from './CanvasReactor';
 import { CanvasInformation } from './CanvasInformation';
 import { CanvasPluginZoom } from './CanvasPluginZoom';
 import { CanvasInformationTable } from './CanvasInformationTable';
+import { defaultPropertyTemplate } from './common/propertyTemplate';
 
 // properties
 // mapKey
@@ -23,6 +24,8 @@ export class CanvasPositionMonitor extends Component {
   render() {
     const positions = this.props.positions;
     const selectThingId = this.props.selectThingId;
+    const propertyTemplate = this.props.propertyTemplate ||
+      defaultPropertyTemplate;
     return (
       <CanvasContainer mapkey={this.props.mapKey}>
         {this.props.canvasExtra}
@@ -35,7 +38,7 @@ export class CanvasPositionMonitor extends Component {
         <CanvasInformation
           onClose={() => selectThingId(undefined) }
           data={this.props.selectedThing}
-          template={this.props.propertyTemplate}
+          template={propertyTemplate}
         />
         <Box
           direction='row'
@@ -48,7 +51,7 @@ export class CanvasPositionMonitor extends Component {
           height='small'
           overflow='auto'
           positions={positions}
-          template={this.props.propertyTemplate}
+          template={propertyTemplate}
         />
         <CanvasPluginZoom
           direction='row'
