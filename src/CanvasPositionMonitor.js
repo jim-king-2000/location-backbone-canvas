@@ -56,7 +56,7 @@ export class CanvasPositionMonitor extends Component {
           onChange={e => this.setState({ tracingMode: e.target.checked })}
           style={{
             position: 'absolute',
-            bottom: 'small',
+            bottom: '30px',
             right: 0
           }}
         />
