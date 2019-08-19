@@ -40,24 +40,26 @@ export class CanvasPositionMonitor extends Component {
           data={this.props.selectedThing}
           template={propertyTemplate}
         />
-        <Box
-          direction='row'
-          align='start'
-          style={{
-            position: 'absolute',
-            top: 0
-          }}>
         {!this.props.simple && <CanvasInformationTable
           height='small'
           overflow='auto'
           positions={positions}
           template={propertyTemplate}
+          style={{
+            position: 'absolute',
+            top: 0
+          }}
         />}
         <CanvasPluginZoom
           direction='row'
           tracingMode={this.state.tracingMode}
-          onChange={e => this.setState({ tracingMode: e.target.checked })} />
-        </Box>
+          onChange={e => this.setState({ tracingMode: e.target.checked })}
+          style={{
+            position: 'absolute',
+            bottom: '30px',
+            right: 0
+          }}
+        />
         <CanvasReactor
           markers={positions}
           tracingMode={this.state.tracingMode} />

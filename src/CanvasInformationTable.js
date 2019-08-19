@@ -5,7 +5,7 @@ import { Box, Table, TableHeader, TableBody, TableRow,
 
 export const CanvasInformationTable = observer(
   ({ positions, template, ...props }) => (
-  <Box {...props}>
+  <Box background='#FFFFFFD0' {...props}>
     <Table>
       <TableHeader>
         <TableRow>
