@@ -47,12 +47,12 @@ export class CanvasPositionMonitor extends Component {
             position: 'absolute',
             top: 0
           }}>
-        <CanvasInformationTable
+        {!this.props.simple && <CanvasInformationTable
           height='small'
           overflow='auto'
           positions={positions}
           template={propertyTemplate}
-        />
+        />}
         <CanvasPluginZoom
           direction='row'
           tracingMode={this.state.tracingMode}
