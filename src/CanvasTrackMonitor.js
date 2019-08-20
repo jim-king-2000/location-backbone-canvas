@@ -12,6 +12,7 @@ import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 
 export const CanvasTrackMonitor = ({
   mapKey,
+  simple,
   positions,
   tracks,
   selectedThing,
@@ -20,6 +21,7 @@ export const CanvasTrackMonitor = ({
 }) => (
   <CanvasPositionMonitor
     mapKey={mapKey}
+    simple={simple}
     positions={positions}
     selectedThing={selectedThing}
     selectThingId={selectThingId}
