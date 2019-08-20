@@ -5,7 +5,6 @@ import { CanvasReactor } from './CanvasReactor';
 import { CanvasInformation } from './CanvasInformation';
 import { CanvasPluginZoom } from './CanvasPluginZoom';
 import { CanvasInformationTable } from './CanvasInformationTable';
-import { defaultPropertyTemplate } from './common/propertyTemplate';
 
 // properties
 // mapKey
@@ -23,8 +22,7 @@ export class CanvasPositionMonitor extends Component {
   render() {
     const positions = this.props.positions;
     const selectThingId = this.props.selectThingId;
-    const propertyTemplate = this.props.propertyTemplate ||
-      defaultPropertyTemplate;
+    const propertyTemplate = this.props.propertyTemplate;
     return (
       <CanvasContainer mapkey={this.props.mapKey}>
         {this.props.canvasExtra}
