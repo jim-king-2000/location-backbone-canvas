@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Box } from 'grommet';
 import { CanvasContainer } from './CanvasContainer';
 import { CanvasPositions } from './CanvasPositions';
 import { CanvasReactor } from './CanvasReactor';
