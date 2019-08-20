@@ -3,12 +3,13 @@ import { CanvasTracks } from './CanvasTracks';
 import { CanvasPositionMonitor } from './CanvasPositionMonitor';
 
 // properties
-// mapKey
-// positions
-// selectedThing
-// selectThingId = thingId => {}
-// propertyTemplate
-// tracks
+//   mapKey
+//   simple
+//   positions
+//   selectedThing
+//   selectThingId = thingId => {}
+//   propertyTemplate
+//   tracks
 
 export const CanvasTrackMonitor = ({
   mapKey,
