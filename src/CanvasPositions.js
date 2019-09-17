@@ -27,7 +27,7 @@ export const CanvasPositions = observer(
           angle={p.heading}
           extData={p}
           events={{
-            created: () => __map__.setFitView(),
+            // created: () => __map__.setFitView(),
             ...events
           }}
           {...props}

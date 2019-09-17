@@ -58,6 +58,8 @@ export class CanvasPositionMonitor extends Component {
           }}
         />
         <CanvasReactor
+          setFitView={this.props.setFitView}
+          onUpdateEnd={this.props.onUpdateEnd}
           markers={positions}
           tracingMode={this.state.tracingMode} />
       </CanvasContainer>
