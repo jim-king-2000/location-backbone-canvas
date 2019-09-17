@@ -8,7 +8,7 @@ export class CanvasReactor extends Component {
     if (!this.props.setFitView) return;
     const __map__ = this.props.__map__;
     console.log(__map__.getAllOverlays('marker'))
-    __map__.setFitView();
+    setTimeout(() => __map__.setFitView(), 300);
     if (this.props.onUpdateEnd) this.props.onUpdateEnd();
   }
 
