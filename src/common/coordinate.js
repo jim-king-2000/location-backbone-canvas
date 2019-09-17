@@ -1,10 +1,10 @@
 import { transform, WGS84, GCJ02, BD09 } from 'gcoord';
 
-function transformPoint(p, sourceCoordinateType) {
+function transformPoint(p, sourceCoordinateType, targetCoordinateType = GCJ02) {
   const [longitude, latitude] = transform(
     [p.longitude, p.latitude],
     sourceCoordinateType,
-    GCJ02
+    targetCoordinateType
   );
   const newPoint = { ...p };
   newPoint.longitude = longitude;
