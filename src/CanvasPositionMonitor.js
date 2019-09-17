@@ -25,6 +25,11 @@ export class CanvasPositionMonitor extends Component {
     const propertyTemplate = this.props.propertyTemplate;
     return (
       <CanvasContainer mapkey={this.props.mapKey}>
+        <CanvasReactor
+          setFitView={this.props.setFitView}
+          onUpdateEnd={this.props.onUpdateEnd}
+          markers={positions}
+          tracingMode={this.state.tracingMode} />
         {this.props.canvasExtra}
         <CanvasPositions
           positions={positions}
@@ -57,11 +62,7 @@ export class CanvasPositionMonitor extends Component {
             right: 0
           }}
         />
-        <CanvasReactor
-          setFitView={this.props.setFitView}
-          onUpdateEnd={this.props.onUpdateEnd}
-          markers={positions}
-          tracingMode={this.state.tracingMode} />
+        
       </CanvasContainer>
     );
   }
