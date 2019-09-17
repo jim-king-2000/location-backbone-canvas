@@ -4,10 +4,8 @@ import { observer } from 'mobx-react';
 @observer
 export class CanvasReactor extends Component {
   componentDidUpdate() {
-    console.log(this.props.setFitView)
     if (!this.props.setFitView) return;
     const __map__ = this.props.__map__;
-    console.log(__map__.getAllOverlays('marker'))
     setTimeout(() => __map__.setFitView(), 300);
     if (this.props.onUpdateEnd) this.props.onUpdateEnd();
   }
