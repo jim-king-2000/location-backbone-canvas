@@ -6,7 +6,7 @@ export class CanvasReactor extends Component {
   componentDidUpdate() {
     if (!this.props.setFitView) return;
     const __map__ = this.props.__map__;
-    setTimeout(() => __map__.setFitView(), 300);
+    setTimeout(() => __map__.setFitView(), 50);
     if (this.props.onUpdateEnd) this.props.onUpdateEnd();
   }
 
