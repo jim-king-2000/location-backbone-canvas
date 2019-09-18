@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default props => (
+export const CarTopView = props => (
   <svg
     {...props}
     preserveAspectRatio='xMidYMid meet'

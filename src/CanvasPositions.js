@@ -2,7 +2,7 @@ import React from 'react';
 import { Marker } from 'react-amap';
 import { observer } from 'mobx-react';
 import { colorPool } from './common/PolylineStyle';
-import CarTopView from '../icon/CarTopView';
+import { CarTopView } from '../icon/CarTopView';
 
 export const CanvasPositions = observer(
   ({ __map__, positions, events, ...props }) => (
