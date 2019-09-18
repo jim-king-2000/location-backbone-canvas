@@ -9,3 +9,6 @@ export * from './src/CanvasPositions';
 export * from './src/CanvasReactor';
 export * from './src/CanvasTrackMonitor';
 export * from './src/CanvasTracks';
+export * from './icon/CarTopView';
+export * from './src/common/PolylineStyle';
+export * from './src/common/propertyTemplate';
