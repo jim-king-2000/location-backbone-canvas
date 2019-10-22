@@ -1,3 +1,5 @@
+import randomColor from 'randomcolor';
+
 export const lineStyle = {
   strokeWeight: 2,
   lineJoin: 'round',
@@ -13,3 +15,17 @@ export const colorPool = [
   '#00FF00',
   '#FFFF00',
 ];
+
+export class ColorPool {
+  colorPool = [];
+
+  getColor(index) {
+    const color = colorPool[index];
+    if (!color) {
+      colorPool[index] = randomColor();
+      return colorPool[index];
+    } else {
+      return color;
+    }
+  }
+}
