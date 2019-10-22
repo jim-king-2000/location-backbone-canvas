@@ -17,13 +17,14 @@ export const colorPool = [
 ];
 
 export class ColorPool {
-  colorPool = [];
+  #colorPool = [];
 
   getColor(index) {
-    const color = colorPool[index];
+    let color = #colorPool[index];
     if (!color) {
-      colorPool[index] = randomColor();
-      return colorPool[index];
+      color = randomColor();
+      #colorPool[index] = color;
+      return color;
     } else {
       return color;
     }
