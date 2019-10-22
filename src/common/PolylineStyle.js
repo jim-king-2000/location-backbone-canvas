@@ -17,7 +17,7 @@ export const colorPool = [
 ];
 
 export class ColorPool {
-  #colorPool = [];
+  static #colorPool = [];
 
   static getColor(index) {
     let color = this.#colorPool[index];
