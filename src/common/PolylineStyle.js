@@ -19,7 +19,7 @@ export const colorPool = [
 export class ColorPool {
   #colorPool = [];
 
-  getColor(index) {
+  static getColor(index) {
     let color = this.#colorPool[index];
     if (!color) {
       color = randomColor();
