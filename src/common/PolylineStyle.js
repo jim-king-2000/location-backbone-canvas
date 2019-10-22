@@ -20,10 +20,10 @@ export class ColorPool {
   #colorPool = [];
 
   getColor(index) {
-    let color = #colorPool[index];
+    let color = this.#colorPool[index];
     if (!color) {
       color = randomColor();
-      #colorPool[index] = color;
+      this.#colorPool[index] = color;
       return color;
     } else {
       return color;
