@@ -21,12 +21,10 @@ export class ColorPool {
 
   static getColor(index) {
     let color = this.#colorPool[index];
-    if (!color) {
-      color = randomColor();
-      this.#colorPool[index] = color;
-      return color;
-    } else {
-      return color;
-    }
+    if (color) return color;
+
+    color = randomColor();
+    this.#colorPool[index] = color;
+    return color;
   }
 }
