@@ -20,8 +20,5 @@
   "dependencies": {
     "gcoord": "^0.2.3",
     "randomcolor": "^0.5.4"
-  },
-  "peerDependencies": {
-    "mobx-react": "^6.1.1"
   }
 }
