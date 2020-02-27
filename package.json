@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/jim-king-2000/location-backbone-canvas#readme",
   "dependencies": {
-    "gcoord": "^0.2.3",
     "randomcolor": "^0.5.4"
   }
 }
